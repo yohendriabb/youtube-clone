@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+
+{% block content %}
+
+<div class="d-flex">
+	<div class="card col-2">
+		<div class="card-header">
+			<div class="d-flex flex-column ">
+				<a class="p-2" href="#">Principal</a>
+				<a class="p-2" href="#">Explorar</a>
+				<a class="p-2" href="#">Suscripciones</a>
+				<a class="p-2" href="#">Biblioteca</a>
+				<a class="p-2" href="#">Historial</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="container-fluid">
+		
+		{% for pt in post %}
+		<div class="card mt-2 " style="width: 18rem;">
+			<img class="card-img-top" src="{{pt.img.url}}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{pt.title}}</h5>
+			</div>
+			<ul class="list-group list-group-flush">
+
+			</ul>
+			<div class="card-body">
+				<a href="#" class="card-link">Card link</a>
+				<a href="#" class="card-link">Another link</a>
+			</div>
+		</div>
+		{% endfor %}
+			
+
+	</div>
+	{% endblock content %}
